@@ -1,0 +1,6 @@
+{
+	"SSH_GATEWAY":"192.168.0.1",
+	"SSH_SERVER":"192.168.0.10",
+	"SSH_USER":"root",
+	"SSH_PASS":"secret"
+}
