@@ -3,12 +3,11 @@ window.$ = window.jQuery = require('jquery');
 var ping = require('ping'),
 	keytar = require('keytar'),
 	SSH = require('simple-ssh'),
+	fs = require('fs'),
 	nconf = require('nconf');
 
-nconf.file({ file: 'config.json' });
+var configpath = __dirname + '/../config.json';
+console.log(configpath);
+nconf.file({ file: configpath });
 
 require('bootstrap-sass/assets/javascripts/bootstrap');
-
-ping.promise.probe(nconf.get('SSH_GATEWAY')).then(function (res) {
-	$('#gateway-status').text(res.alive ? 'Alive' : 'unreachable');
-});
