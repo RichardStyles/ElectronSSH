@@ -10,5 +10,5 @@ nconf.file({ file: 'config.json' });
 require('bootstrap-sass/assets/javascripts/bootstrap');
 
 ping.promise.probe(nconf.get('SSH_GATEWAY')).then(function (res) {
-	console.log(res);
+	$('#gateway-status').text(res.alive ? 'Alive' : 'unreachable');
 });
