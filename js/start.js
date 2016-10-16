@@ -1,8 +1,16 @@
 $( document ).ready(function() {
   console.log("Application started");
-  pingDevices();
-  connectToDevice();
+  setInterval(function(){
+  	start();
+  }, 10000);
+  start();
 });
+
+function start()
+{
+	pingDevices();
+	connectToDevice();
+}
 
 function pingDevices(){
 	ping.promise.probe(nconf.get('SSH_GATEWAY')).then(function (res) {
