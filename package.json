@@ -1,11 +1,11 @@
 {
-  "name": "sshunifi",
+  "name": "ElectronSSH",
   "version": "1.0.0",
   "description": "Local SSH tool to connect to unifi usg",
   "main": "./main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager ./ unifilocal --platform=darwin --out ./dist --overwrite",
+    "package": "electron-packager ./ ElectronSSH --platform=darwin --out ./dist --overwrite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "rebuild": "electron-rebuild -f -w simple-ssh ping keytar"
   },
